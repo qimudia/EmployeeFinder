@@ -8,7 +8,9 @@ const employees = require('./app/data/employees.js');
 const app = express();
 
 // Set PORT to 8080
-const PORT = 8080;
+//const PORT = 8080;
+var PORT = process.env.PORT || 3000;
+   
 
 // Sets up our server to parse our request body for usage
 app.use(express.urlencoded({ extended: true }));
