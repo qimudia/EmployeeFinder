@@ -12,8 +12,12 @@ app.get('/api/employees', function (req, res) {
   
   // POST method route
   app.post('/api/employees', function (req, res) {
-    res.sendFile('POST request to the homepage')
-  })
+    employeesList.push(req.body); 
+
+    
+    res.end();
+    //res.sendFile('POST request to the homepage')
+  });
 
 
      /**

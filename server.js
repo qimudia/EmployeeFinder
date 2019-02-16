@@ -22,8 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
-require('./app/public/js/survey.js')(app);
-
 
 // Starts the server...
 app.listen(PORT, function(){
