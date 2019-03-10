@@ -32,7 +32,7 @@ $(function(){
   //Add employees function
    const employeesInfo = function(event) {
       event.preventDefault();
-  //console.log('clicked')
+  
       // Here we grab the form elements
       const userInfo = {
         name: $('#name').val().trim(),
@@ -71,27 +71,13 @@ $(function(){
         method: 'POST',
         url: 'api/employees',
         data: userInfo
-      })
+      }).then(function(data){
+        window.alert("We have got a match: " + data.name) 
+      });
+      
     }
 
-   /* // compare users
-  var arr = [];
-  for (var i = 0, ref = arr.length = scores.length; i < ref; i++) {
-   arr[i] = scores[i];
-  } 
- function Search()
-  {
-      if (arr.indexOf(employeesArray)> -1)
-      {
-          alert("We found a match");
-      }
-      else
-      {
-          alert("No matched");
-      }
-
-  } 
-  Search();*/
+  
   
     $('#submit').on('click', employeesInfo); 
 });
