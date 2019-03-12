@@ -72,7 +72,7 @@ $(function(){
         url: 'api/employees',
         data: userInfo
       }).then(function(data){
-        window.alert("We have got a match: " + data.name) 
+        window.alert("We have got a match: " + data.name + ",  "+ data.link) 
       });
       
     }
